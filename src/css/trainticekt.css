@@ -1,0 +1,23 @@
+#simple_table {
+	font-family: arial, sans-serif;
+	 border-collapse: collapse; 
+	 width: 100%;
+	background-color: #ffffff;
+	color:black;
+    border: 1px solid #95dfac;
+}
+#simple_table td, #simple_table th {
+	 text-align: left;
+	 padding: 8px;
+     vertical-align: baseline;
+	
+}
+
+#simple_table tr:hover {
+	background-color: #ffffff;
+}
+#simple_table tr > th 
+{
+	background: #98e2af;
+	 color: #ffffff;
+}
