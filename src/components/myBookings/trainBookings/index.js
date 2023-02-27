@@ -22,6 +22,7 @@ import { jsPDF } from "jspdf";
 const { Header, Content, Footer, Sider } = Layout;
 
 const TrainBookings = (props) => {
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -212,6 +213,19 @@ const TrainBookings = (props) => {
     },
     {
       title: "Duration",
+      dataIndex: "duration",
+      key: "duration",
+      sorter: true,
+      sorterDirections: ["descend", "ascend"],
+      render: (index, item) => {
+        return (
+          <div>
+            {typeof(item.duration) == "string"
+              ? item.duration
+              : item.duration.m>0 ? item.duration.d>0 ? item.duration.m+" Months" + item.duration.d + " Days" : item.duration.m+" Months" : item.duration.d + " Days" }
+          </div>
+        );
+      },
     },
     {
       title: "Booking Date",
@@ -259,13 +273,13 @@ const TrainBookings = (props) => {
             <div style={{paddingLeft: "15" }}>
               <BsDownload style={{ cursor: "pointer"}} onClick={() => {
                 const doc = new jsPDF();
-                doc.text(20, 20, `Ticket Id :  ${trainBookingsData?.trainBookingsList.ticketId}`);
-                doc.text(20, 20, `Source :  ${trainBookingsData?.trainBookingsList.source}`);
-                doc.text(20, 20, `Destination :  ${trainBookingsData?.trainBookingsList.destination}`);
-                doc.text(20, 20, `Last Name :  ${trainBookingsData?.trainBookingsList.endDate}`);
-                doc.text(20, 20, `Address :  ${trainBookingsData?.trainBookingsList.price}`);
+                doc.text(20, 20, `Ticket Id :  ${trainBookingsData?.trainBookingsList[0].ticketId}`);
+                doc.text(20, 40, `Source :  ${trainBookingsData?.trainBookingsList[0].source}`);
+                doc.text(20, 60, `Destination :  ${trainBookingsData?.trainBookingsList[0].destination}`);
+                doc.text(20, 80, `Last Name :  ${trainBookingsData?.trainBookingsList[0].endDate}`);
+                doc.text(20, 100, `Address :  ${trainBookingsData?.trainBookingsList[0].price}`);
                 // doc.text(20, 20, `Duration :  ${trainBookingsData?.trainBookingsList.user.email}`);
-                doc.text(20, 20, `Booking Date:  ${trainBookingsData?.trainBookingsList.user.phoneNumber}`);
+                // doc.text(20, 20, `Booking Date:  ${trainBookingsData?.trainBookingsList.user.phoneNumber}`);
                 doc.save("bill.pdf");
               }} />
             </div>
@@ -493,13 +507,13 @@ const TrainBookings = (props) => {
             <div style={{ paddingLeft: "15" }}>
               <BsDownload style={{ cursor: "pointer"}} onClick={() => {
                 const doc = new jsPDF();
-                doc.text(20, 20, `Ticket Id :  ${trainBookingsData?.trainBookingsList.ticketId}`);
-                doc.text(20, 20, `Source :  ${trainBookingsData?.trainBookingsList.source}`);
-                doc.text(20, 20, `Destination :  ${trainBookingsData?.trainBookingsList.destination}`);
-                doc.text(20, 20, `Last Name :  ${trainBookingsData?.trainBookingsList.endDate}`);
-                doc.text(20, 20, `Address :  ${trainBookingsData?.trainBookingsList.price}`);
+                doc.text(20, 20, `Ticket Id :  ${trainBookingsData?.trainBookingsList[0].ticketId}`);
+                doc.text(20, 40, `Source :  ${trainBookingsData?.trainBookingsList[0].source}`);
+                doc.text(20, 60, `Destination :  ${trainBookingsData?.trainBookingsList[0].destination}`);
+                doc.text(20, 80, `Last Name :  ${trainBookingsData?.trainBookingsList[0].endDate}`);
+                doc.text(20, 100, `Address :  ${trainBookingsData?.trainBookingsList[0].price}`);
                 // doc.text(20, 20, `Duration :  ${trainBookingsData?.trainBookingsList.user.email}`);
-                doc.text(20, 20, `Booking Date:  ${trainBookingsData?.trainBookingsList.user.phoneNumber}`);
+                // doc.text(20, 20, `Booking Date:  ${trainBookingsData?.trainBookingsList.user.phoneNumber}`);
                 doc.save("bill.pdf");
               }} />
             </div>

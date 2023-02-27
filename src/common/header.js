@@ -37,19 +37,28 @@ const HeaderMain = (props) => {
   const { SubMenu } = Menu;
   let token = localStorage.getItem("token");
   
+  const [scroll,setScroll] = useState(false);
+  
   const handleScroll = () => {
     if (window.pageYOffset >= 10) {
       console.log("Scrolling");
+      setScroll(true)
       return true;
     } else {
       console.log("Stopping");
+      setScroll(false)
       return false;
     }
   }
+
+  
   useEffect(() => {
-    handleScroll()
-    console.log("HEADER 1");
-  }, [handleScroll])
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
   
   useLayoutEffect(() => {
     if (logoutSuccess) {
@@ -155,12 +164,11 @@ const HeaderMain = (props) => {
   }
 
   console.log('====================================');
-  console.log(handleScroll());
   console.log(window.pageYOffset)
   return (
     <>
       {!token ? (
-        <div className="header-home" style={{ background: {handleScroll} ? "white" : "white"}}>
+        <div className="header-home" style={{ background: {scroll} ? "white" : "transparent"}}>
           <div className="container-fluid">
             <div className="header-desktop">
               <Menu
@@ -238,7 +246,7 @@ const HeaderMain = (props) => {
           </div>
         </div>
       ) : (
-          <div className="header-home" style={{ background: handleScroll() ? "white" : "white" }}>
+          <div className="header-home" style={{ background: scroll ? "white" : "transparent" }}>
           <div className="container-fluid">
             <div className="header-desktop">
               <Menu

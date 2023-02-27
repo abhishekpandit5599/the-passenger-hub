@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect,useRef } from "react";
 import { Button, Layout, Menu, Modal, Spin } from "antd";
 import images from "../../../themes/appImage";
 // import tableLoading from '../common/tableloading'
@@ -28,6 +28,25 @@ import { cancelSeasonTicketInitiate } from "../../../redux/actions/seasonTickets
 import { getMemoizedMyBookingsData } from "../../../redux/selectors/myBookings";
 
 const BookingDetails = (props) => {
+  const reportTemplateRef = useRef(null);
+  const handleGeneratePdf = () => {
+    reportTemplateRef.current.style.maxWidth = "400px"
+    const doc = new jsPDF({
+      format: 'a4',
+			unit: 'px',
+		});
+
+		// Adding the fonts.
+		doc.setFont('Inter-Regular', 'normal');
+
+		doc.html(reportTemplateRef.current, {
+			async callback(doc) {
+        reportTemplateRef.current.style.maxWidth = "700px"
+				await doc.save('document');
+			},
+		});
+	};
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { pathname, state } = useLocation();
@@ -259,7 +278,7 @@ const BookingDetails = (props) => {
                 >
                   Order details
                 </h2>
-                <div className="order-content">
+                <div className="order-content" ref={reportTemplateRef}>
                   <h4>Order Number : {bookingDetails?.ticketId}</h4>
                   <h5>Order Summary</h5>
                   <div className="o-c-data">
@@ -372,10 +391,7 @@ const BookingDetails = (props) => {
                   fontWeight: 600,
                 }}
                 // onClick={() => printJS("test", "html")}
-                onClick={() => {
-                  const doc = new jsPDF();
-                  doc.save("bill.pdf");
-                }}
+                onClick={() => handleGeneratePdf()}
               >
                 Download
               </Button>

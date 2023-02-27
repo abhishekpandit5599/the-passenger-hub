@@ -230,7 +230,7 @@ const PurchaseOyster = (props) => {
                                     return (
                                       <Option
                                         key={ele}
-                                      >{`${ele} £ ${selectedZoneValue[ele]}`}</Option>
+                                      >{`£ ${selectedZoneValue[ele]} - ${ele}`}</Option>
                                     );
                                   })}
                               </Select>

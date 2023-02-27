@@ -42,8 +42,8 @@ const OrderManager = () => {
       <HeaderMain handleClick={handlewClick} />
       <div class="ord-main">
         <div class="ord-main-wrap">
+        <h3 style={{textAlign:"center"}}>Confirmation</h3>
           <h3>
-            Confirmation -{" "}
             <span>Order Reference {seasonTktDetail?.ticketId}</span>
           </h3>
           <div class="ord-data-box">

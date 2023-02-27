@@ -3118,18 +3118,25 @@ button.button.text.season_tkt_btn {
   font-weight: 600;
   margin: 20px 0;
 }
-.o-c-data {
+/* .o-c-data {
   padding-left: 20px;
   display: flex;
   gap: 20px;
   font-size: 14px;
+} */
+.o-c-data {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 18px 0;
 }
 .o-c-d-title {
   width: 150px;
   font-weight: 600;
 }
 .o-c-i-data {
-  padding-left: 20px;
+  /* padding-left: 20px; */
   display: flex;
   gap: 20px;
   font-size: 14px;
@@ -3138,8 +3145,12 @@ button.button.text.season_tkt_btn {
 .o-c-i-d-title {
   font-weight: 600;
 }
+.o-c-value {
+  width: 100px;
+}
 .o-c-i-value {
   font-weight: 600;
+  width: 100px;
 }
 .o-c-i-price {
   color: #00d9b2;
@@ -3247,7 +3258,7 @@ li.what-we-do-list-item {
   -webkit-background-clip: text;
 }
 .ord-data-box {
-  background: rgb(245, 245, 245);
+  /* background: rgb(245, 245, 245); */
   margin: 10px 0;
   padding: 20px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
@@ -3260,6 +3271,8 @@ li.what-we-do-list-item {
   padding-bottom: 15px;
   position: relative;
   display: inline-block;
+  color: #7bd0d3;
+    -webkit-background-clip: text;
 }
 .ord-data-box h4::after {
   content: "";
@@ -3268,12 +3281,12 @@ li.what-we-do-list-item {
   left: 0;
   width: 50%;
   height: 3px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #84e0ab 5%,
     #7bd0d3 51.25%,
     #84e0ab 93.75%
-  );
+  ); */
 }
 .ord-data-flex {
   display: flex;
