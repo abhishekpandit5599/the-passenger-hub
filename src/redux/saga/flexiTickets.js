@@ -180,7 +180,7 @@ export function* flexiTktPaymentSaga(action) {
         duration: 5,
         type: "success",
       });
-      action.navigate("/orderManager");
+      action.navigate("/orderManager/:ticketId");
     } else {
       yield put(flexiTktPaymentFailure(result.data.message));
       toast.notify(result.data.message, {

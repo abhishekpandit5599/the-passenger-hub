@@ -218,6 +218,9 @@ const OrderManager = () => {
               </div>
             </div>
           </div>
+          {params.ticketId == ":ticketId" && <div style={{textAlign:"right",marginTop:"30px"}}>
+            <button onClick={()=> navigate('/myBookings')} className="button text season_tkt_btn">Done</button>
+          </div>}
         </div>
       </div>
       <FooterMain />
