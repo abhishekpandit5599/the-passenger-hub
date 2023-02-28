@@ -188,6 +188,7 @@ export function* flexiTktPaymentSaga(action) {
         type: "error",
       });
     }
+    
   } catch (error) {
     if (error?.status === 4) {
       yield call(loginAgain, error.error, action.navigate);
