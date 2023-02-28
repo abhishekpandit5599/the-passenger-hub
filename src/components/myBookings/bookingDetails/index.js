@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect,useRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Button, Layout, Menu, Modal, Spin } from "antd";
 import images from "../../../themes/appImage";
 // import tableLoading from '../common/tableloading'
@@ -26,26 +26,20 @@ import {
 } from "../../../redux/actions/myBookings";
 import { cancelSeasonTicketInitiate } from "../../../redux/actions/seasonTickets";
 import { getMemoizedMyBookingsData } from "../../../redux/selectors/myBookings";
+import "../../../css/home.css";
 
 const BookingDetails = (props) => {
   const reportTemplateRef = useRef(null);
   const handleGeneratePdf = () => {
-    reportTemplateRef.current.style.maxWidth = "400px"
-    const doc = new jsPDF({
-      format: 'a4',
-			unit: 'px',
-		});
+    var prtContent = document.getElementById("printRecipt");
+    var WinPrint = window.open();
+    WinPrint.document.write(prtContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();
+  };
 
-		// Adding the fonts.
-		doc.setFont('Inter-Regular', 'normal');
-
-		doc.html(reportTemplateRef.current, {
-			async callback(doc) {
-        reportTemplateRef.current.style.maxWidth = "700px"
-				await doc.save('document');
-			},
-		});
-	};
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -255,6 +249,7 @@ const BookingDetails = (props) => {
           <NoPrint>
             <Print>
               <div
+                id="printRecipt"
                 style={{
                   margin: "6rem auto 2rem",
                   border: "1px solid lightgray",
@@ -281,23 +276,23 @@ const BookingDetails = (props) => {
                 <div className="order-content" ref={reportTemplateRef}>
                   <h4>Order Number : {bookingDetails?.ticketId}</h4>
                   <h5>Order Summary</h5>
-                  <div className="o-c-data">
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-data">
                     <div className="o-c-d-title">Order Date :</div>
                     <div className="o-c-value">
                       {moment(bookingDetails?.createdAt).format("YYYY-MM-DD")}
                     </div>
                   </div>
-                  <div className="o-c-data">
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-data">
                     <div className="o-c-d-title">Ticket ID :</div>
                     <div className="o-c-value">{bookingDetails?.ticketId}</div>
                   </div>
-                  <div className="o-c-data">
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-data">
                     <div className="o-c-d-title">Payment Card :</div>
                     <div className="o-c-value">Visa</div>
                   </div>
                   <h5>Billing Details</h5>
-                  <div className="o-c-data">
-                    <div className="o-c-d-title">Name and Address :</div>
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-data">
+                    <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-d-title">Name and Address :</div>
                     <div className="o-c-value">
                       {bookingDetails?.user?.fullName}
                       <br />
@@ -305,12 +300,12 @@ const BookingDetails = (props) => {
                     </div>
                   </div>
                   <h5>Items in this order</h5>
-                  <div className="o-c-i-data">
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-i-data">
                     <div className="o-c-i-d-title">Item</div>
                     <div className="o-c-i-value">Price</div>
                   </div>
                   <hr />
-                  <div className="o-c-i-data">
+                  <div style={{display:"flex",justifyContent:"space-between"}} className="o-c-i-data">
                     <div className="o-c-i-d-title">
                       {bookingDetails?.duration} Travelcard{" "}
                       {bookingDetails?.source}
@@ -347,7 +342,7 @@ const BookingDetails = (props) => {
             <div
               style={{
                 marginTop: "1rem",
-                marginBottom : "2rem",
+                marginBottom: "2rem",
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",

@@ -1094,7 +1094,7 @@ textarea.form-control::placeholder {
   margin: 0;
 }
 .button_bottom {
-  margin-top: 41px;
+  margin-top: 100px;
 }
 .text-input-filed .form-group {
   position: relative;
@@ -1859,7 +1859,7 @@ button.button.text.color_diff {
 
 .wapper-Login .password_small.custom_padd {
   padding: 47px 58px 80px 75px;
-  padding-top: 6rem;
+  padding-top: 3rem;
 
 }
 .slick-slider.slick-initialized {
@@ -3404,3 +3404,4 @@ li.what-we-do-list-item {
 .cookies li{
   margin: 7px 0px;
 }
+

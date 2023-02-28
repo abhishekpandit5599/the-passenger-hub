@@ -236,8 +236,8 @@ const TrainBookings = (props) => {
       render: (index, item) => {
         return (
           <div>
-            {item.bookingDate
-              ? moment(item.bookingDate).format("DD MMM YYYY")
+            {item.startDate
+              ? moment(item.startDate).format("DD MMM YYYY")
               : "N/A"}
           </div>
         );
@@ -346,8 +346,8 @@ const TrainBookings = (props) => {
       render: (index, item) => {
         return (
           <div>
-            {item.bookingDate
-              ? moment(item.bookingDate).format("DD MMM YYYY")
+            {item.startDate
+              ? moment(item.startDate).format("DD MMM YYYY")
               : "N/A"}
           </div>
         );
@@ -470,8 +470,8 @@ const TrainBookings = (props) => {
       render: (index, item) => {
         return (
           <div>
-            {item.bookingDate
-              ? moment(item.bookingDate).format("DD MMM YYYY")
+            {item.startDate
+              ? moment(item.startDate).format("DD MMM YYYY")
               : "N/A"}
           </div>
         );

@@ -315,7 +315,7 @@ const TubeBookings = (props) => {
               });
             }}
           >
-            <a href="/bookingdetails">{10000000 + item.ticketId}</a> 
+            <a href="/bookingdetails">{item.ticketId}</a> 
           </div>
         );
       },

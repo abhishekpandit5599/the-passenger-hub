@@ -11,6 +11,7 @@ import { getMemoizedAuthenticationData } from "../redux/selectors/authentication
 import { logoutInitiate } from "../redux/actions/authentication";
 import { appConstants, serverUrl } from "../themes/appConstant";
 import { fontWeight } from "@mui/system";
+import LogoChange2 from "../images/passanger logo.png";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -181,11 +182,15 @@ const HeaderMain = (props) => {
                 mode="horizontal"
                 onClick={handleClick}
               >
-                <Menu.Item key="/landing">
+                {scroll ? <Menu.Item key="/landing">
                   <Link to="/">
                     <img src={LogoChange} style={{ width: "280px" }} />
                   </Link>
-                </Menu.Item>
+                </Menu.Item> : <Menu.Item key="/landing">
+                  <Link to="/">
+                    <img src={LogoChange2} style={{ width: "280px" }} />
+                  </Link>
+                </Menu.Item>}
 
                 <Menu.Item key="/finance">
                   <Link to="/finance">
@@ -258,7 +263,7 @@ const HeaderMain = (props) => {
                 mode="horizontal"
                 onClick={handleClick}
               >
-                <Menu.Item
+                {/* <Menu.Item
                   key="/landing"
                   onClick={() => {
                     // localStorage.clear()
@@ -267,7 +272,18 @@ const HeaderMain = (props) => {
                   }}
                 >
                   <img src={images.logohome} style={{ width: "280px" }} />
-                </Menu.Item>
+                </Menu.Item> */}
+
+                {scroll ? <Menu.Item key="/landing">
+                  <Link to="/">
+                    <img src={LogoChange} style={{ width: "280px" }} />
+                  </Link>
+                </Menu.Item> : <Menu.Item key="/landing">
+                  <Link to="/">
+                    <img src={LogoChange2} style={{ width: "280px" }} />
+                  </Link>
+                </Menu.Item>}
+                
 
                 <SubMenu key="SubMenu" title="My Account" className="item_team">
                   <Menu.Item key="/newBookings">
@@ -370,7 +386,6 @@ const HeaderMain = (props) => {
                               height: "100%",
                               textAlign: "center",
                               paddingTop: "6px",
-                              fontWeight: "bold",
                               background: onLoad(),
                               color : "black"
                             }}>{userData.lastName ? userData.firstName.charAt(0).toUpperCase() + userData.lastName.charAt(0).toUpperCase() : userData.firstName.charAt(0).toUpperCase() + userData.firstName.charAt(1)}
