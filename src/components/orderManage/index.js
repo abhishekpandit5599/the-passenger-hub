@@ -43,11 +43,11 @@ const OrderManager = () => {
       <div class="ord-main">
         <div class="ord-main-wrap">
         <h3 style={{textAlign:"center",marginBottom:"40px"}}>Confirmation</h3>
-          <h3>
+          <h3 className="extra">
             <span style={{fontSize:"1.6rem"}}>Order Reference {seasonTktDetail?.ticketId}</span>
           </h3>
           <div class="ord-data-box">
-            <h4>Order Summary</h4>
+            <h4 style={{webkitBackgroundClip:"text !important",webkitTextFillColor:"transparent",background:"linear-gradient(90deg,#84e0ab 5%,#7bd0d3 51.25%,#84e0ab 93.75%)"}}>Order Summary</h4>
             <div class="ord-data-flex">
               <div class="ord-data-flex-left">
                 <div class="ord-detail-flex">
@@ -106,7 +106,7 @@ const OrderManager = () => {
             </div>
           </div>
           <div class="ord-data-box">
-            <h4>
+            <h4 style={{webkitBackgroundClip:"text !important",webkitTextFillColor:"transparent",background:"linear-gradient(90deg,#84e0ab 5%,#7bd0d3 51.25%,#84e0ab 93.75%)"}}>
               Order Item {seasonTktDetail?.source} to{" "}
               {seasonTktDetail?.destination}
             </h4>
@@ -144,7 +144,7 @@ const OrderManager = () => {
             </div>
           </div>
           <div class="ord-data-box">
-            <h4>Traveller Details</h4>
+            <h4 style={{webkitBackgroundClip:"text !important",webkitTextFillColor:"transparent",background:"linear-gradient(90deg,#84e0ab 5%,#7bd0d3 51.25%,#84e0ab 93.75%)"}}>Traveller Details</h4>
             <div class="ord-data-flex">
               <div class="ord-data-flex-left">
                 <div class="ord-detail-flex">
@@ -175,7 +175,7 @@ const OrderManager = () => {
             </div>
           </div>
           <div class="ord-data-box">
-            <h4>delivery Address</h4>
+            <h4 style={{webkitBackgroundClip:"text !important",webkitTextFillColor:"transparent",background:"linear-gradient(90deg,#84e0ab 5%,#7bd0d3 51.25%,#84e0ab 93.75%)"}}>delivery Address</h4>
             <div class="ord-data-flex">
               <div class="ord-data-flex-left">
                 <div class="ord-detail-flex">

@@ -40,7 +40,7 @@ function AppleLogin({ text, uri }) {
         redirect_uri={`https://passenger.labtest.org.in/landing`}
         onLoginStart={onLoginStart}
         onResolve={({ provider, data }) => {
-          console.log(provider, data);
+          console.log("here", data);
           handleUserLogin(data);
         }}
         onReject={(err) => {

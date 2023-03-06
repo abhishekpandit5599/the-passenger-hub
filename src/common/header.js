@@ -11,7 +11,6 @@ import { getMemoizedAuthenticationData } from "../redux/selectors/authentication
 import { logoutInitiate } from "../redux/actions/authentication";
 import { appConstants, serverUrl } from "../themes/appConstant";
 import { fontWeight } from "@mui/system";
-import LogoChange2 from "../images/passanger logo.png";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -188,7 +187,7 @@ const HeaderMain = (props) => {
                   </Link>
                 </Menu.Item> : <Menu.Item key="/landing">
                   <Link to="/">
-                    <img src={LogoChange2} style={{ width: "280px" }} />
+                    <img src={LogoChange} style={{ width: "280px" }} />
                   </Link>
                 </Menu.Item>}
 
@@ -280,7 +279,7 @@ const HeaderMain = (props) => {
                   </Link>
                 </Menu.Item> : <Menu.Item key="/landing">
                   <Link to="/">
-                    <img src={LogoChange2} style={{ width: "280px" }} />
+                    <img src={LogoChange} style={{ width: "280px" }} />
                   </Link>
                 </Menu.Item>}
                 
@@ -381,9 +380,9 @@ const HeaderMain = (props) => {
                             <div className="defaultImage" style={{
                               borderRadius: "50%",
                               position: "absolute",
-                              fontSize: "18px",
-                              width: "100%",
-                              height: "100%",
+                              fontSize: "12px",
+                              width: "95%",
+                              height: "95%",
                               textAlign: "center",
                               paddingTop: "6px",
                               background: onLoad(),
@@ -452,9 +451,9 @@ const HeaderMain = (props) => {
                         <div className="defaultImage" style={{
                           borderRadius: "50%",
                           position: "absolute",
-                          fontSize: "80px",
-                          width: "100%",
-                          height: "100%",
+                          fontSize: "13px",
+                          width: "95%",
+                          height: "95%",
                           textAlign: "center",
                           paddingTop: "25px",
                           fontWeight: "bold",

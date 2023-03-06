@@ -391,9 +391,9 @@ const HeaderMain = (props) => {
                         <div className="defaultImage" style={{
                         borderRadius: "50%",
                         position: "absolute",
-                        fontSize: "80px",
-                        width: "100%",
-                        height: "100%",
+                        fontSize: "13px",
+                        width: "95%",
+                        height: "95%",
                         textAlign: "center",
                         paddingTop: "25px",
                         fontWeight: "bold",

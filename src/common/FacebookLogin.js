@@ -35,7 +35,7 @@ function FacebookLogin({ text }) {
   return (
     <div className="social-login-inner-wrapper">
       <LoginSocialFacebook
-        appId={"d53ff90d82cf40337145d8f71243426cy" || ""}
+        appId={"139153802401097" || ""}
         fieldsProfile={
           "id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender"
         }

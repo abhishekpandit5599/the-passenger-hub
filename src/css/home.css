@@ -108,6 +108,7 @@ span.button {
     #7bd0d3 51.25%,
     #84e0ab 93.75%
   );
+
   border-radius: 12px;
   color: #1b2536;
   font-size: 19px;
@@ -3255,7 +3256,7 @@ li.what-we-do-list-item {
 .ord-main-wrap h3 span {
   background: #7bd0d3;
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
 }
 .ord-data-box {
   /* background: rgb(245, 245, 245); */
@@ -3272,7 +3273,12 @@ li.what-we-do-list-item {
   position: relative;
   display: inline-block;
   color: #7bd0d3;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text !important;
+  }
+.extra span{
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(90deg,#84e0ab 5%,#7bd0d3 51.25%,#84e0ab 93.75%) !important;
 }
 .ord-data-box h4::after {
   content: "";
