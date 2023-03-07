@@ -496,7 +496,7 @@ const Login = (props) => {
                         Already have an account?
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/register">
+                        <Link style={{ color: "#009877" }} to="/register">
                           Sign Up
                         </Link>
                       </p>
@@ -506,11 +506,11 @@ const Login = (props) => {
                         by creating an accout you agree to our
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/termsCondition">
+                        <Link style={{ color: "#009877" }} to="/termsCondition">
                           Term Of Use
                         </Link>{" "}
                         and{" "}
-                        <Link style={{ color: "#7fd6c3" }} to="/privacyPolicy">
+                        <Link style={{ color: "#009877" }} to="/privacyPolicy">
                           Privacy Policy
                         </Link>
                       </p>
@@ -526,7 +526,7 @@ const Login = (props) => {
                         Already have an account?
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/register">
+                        <Link style={{ color: "#009877" }} to="/register">
                           Sign Up
                         </Link>
                       </p>
@@ -536,11 +536,11 @@ const Login = (props) => {
                         by creating an accout you agree to our
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/termsCondition">
+                        <Link style={{ color: "#009877" }} to="/termsCondition">
                           Term Of Use
                         </Link>{" "}
                         and{" "}
-                        <Link style={{ color: "#7fd6c3" }} to="/privacyPolicy">
+                        <Link style={{ color: "#009877" }} to="/privacyPolicy">
                           Privacy Policy
                         </Link>
                       </p>
@@ -556,7 +556,7 @@ const Login = (props) => {
                         Already have an account?
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/register">
+                        <Link style={{ color: "#009877" }} to="/register">
                           Sign Up
                         </Link>
                       </p>
@@ -566,11 +566,11 @@ const Login = (props) => {
                         by creating an accout you agree to our
                       </p>
                       <p className="registraion-textt">
-                        <Link style={{ color: "#7fd6c3" }} to="/termsCondition">
+                        <Link style={{ color: "#009877" }} to="/termsCondition">
                           Term Of Use
                         </Link>{" "}
                         and{" "}
-                        <Link style={{ color: "#7fd6c3" }} to="/privacyPolicy">
+                        <Link style={{ color: "#009877" }} to="/privacyPolicy">
                           Privacy Policy
                         </Link>
                       </p>

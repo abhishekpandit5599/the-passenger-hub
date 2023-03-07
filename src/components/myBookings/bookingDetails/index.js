@@ -38,7 +38,7 @@ const BookingDetails = (props) => {
     // WinPrint.focus();
     // WinPrint.print();
     // WinPrint.close();
-    window.print()
+    window.print();
   };
 
 
