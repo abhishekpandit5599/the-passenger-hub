@@ -31,13 +31,14 @@ import "../../../css/home.css";
 const BookingDetails = (props) => {
   const reportTemplateRef = useRef(null);
   const handleGeneratePdf = () => {
-    var prtContent = document.getElementById("printRecipt");
-    var WinPrint = window.open();
-    WinPrint.document.write(prtContent.innerHTML);
-    WinPrint.document.close();
-    WinPrint.focus();
-    WinPrint.print();
-    WinPrint.close();
+    // var prtContent = document.getElementById("printRecipt");
+    // var WinPrint = window.open();
+    // WinPrint.document.write(prtContent.innerHTML);
+    // WinPrint.document.close();
+    // WinPrint.focus();
+    // WinPrint.print();
+    // WinPrint.close();
+    window.print()
   };
 
 
