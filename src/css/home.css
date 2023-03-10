@@ -3235,7 +3235,9 @@ li.what-we-do-list-item {
 /**********************************
 * OrderManager Page
 **********************************/
-
+.ant-select-selector{
+  height: auto !important;
+}
 .ord-main {
   background: #eee;
   padding: 100px 0 30px;

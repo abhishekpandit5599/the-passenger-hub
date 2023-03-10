@@ -1106,7 +1106,7 @@ by creating an accout you agree to our
                       </p>
                       <p className="registraion-textt"><Link style={{color:'#7fd6c3'}} to='/termsCondition'>Term Of Use</Link> and <Link style={{color:'#7fd6c3'}} to='/privacyPolicy'>Privacy Policy</Link></p>
                     </div>
-                    <GoogleLogin text={"Sign In with Google"} />
+                    <GoogleLogin text={"Sign up with Google"} />
                   </div>
                 </div>
                 <div>
@@ -1124,7 +1124,7 @@ by creating an accout you agree to our
                       </p>
                       <p className="registraion-textt"><Link style={{color:'#7fd6c3'}} to='/termsCondition'>Term Of Use</Link> and <Link style={{color:'#7fd6c3'}} to='/privacyPolicy'>Privacy Policy</Link></p>
                     </div>
-                    <AppleLogin text={"Sign In with Apple"} />
+                    <AppleLogin text={"Sign up with Apple"} />
                   </div>
                 </div>
               </Slider>
